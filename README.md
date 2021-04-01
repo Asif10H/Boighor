@@ -1,15 +1,15 @@
-# Ebook
+# Boighor
 
-[Live Demo](link) 
+[Live Demo](link) <br/>
 
 ## Front-end Technology
--React.js
--Bootstrap4
+- React.js
+- Bootstrap4
 
 ## Back-end Technology
--Node.js
--Express.js
--MongoDB
+- Node.js
+- Express.js
+- MongoDB
 
-[boighor-client Repository](link)
-[boighor-server Repository](link)
+[boighor-client Repository](link)<br/>
+[boighor-server Repository](link)<br/>

@@ -1,23 +1,45 @@
-import React from 'react';
 
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <nav className="container navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container">
-                <a className="navbar-brand" href="#">Boighor</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ms-auto">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
-                        <a className="nav-link" href="#">Orders</a>
-                        <a className="nav-link" href="#">Admin</a>
-                        <a className="nav-link" href="#">Deals</a>
-                    </div>
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/">Boighor</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <ul className="navbar-nav px-5 mx-5">
+                        <li className="nav-item">
+                            <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/orders">Orders</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/admin">Admin</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/deals">Deals</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link">
+                                {!loggedInUser ? "Login" : loggedInUser.name}
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            {
+                                !loggedInUser.emails ? <Link to='/login'><button className='btn btn-primary'>Login</button></Link> :
+                                    <Link to="/" className="nav-link "><button className="btn btn-primary" onClick={() => setLoggedInUser({})}>Sign out</button></Link>
+                            }
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 };
 

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     const { name, authorName, addPrice, imageURL, _id } = props.product;
-    console.log(name, authorName, addPrice, imageURL, _id);
 
     return (
         <div className="col-lg-4 col-md-6 col-sm-12 m-3 p-3" style={{ width: '18rem' }}>
@@ -14,7 +13,7 @@ const Product = (props) => {
                     <p className="card-subtitle mb-2 text-muted">{authorName}</p>
                     <div className="d-flex justify-content-between">
                         <p className="card-text">${addPrice}</p>
-                        <Link to="/" className="card-link btn btn-primary">Buy Now</Link>
+                        <Link to={`/product/${_id}`} className="card-link btn btn-primary">Buy Now</Link>
                     </div>
                 </div>
             </div>

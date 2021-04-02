@@ -25,7 +25,6 @@ const Admin = () => {
     };
 
     const handleImageUpload = product => {
-        console.log(product.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', 'c5039574c46502e4a3f28eaf9d81b0c0');
         imageData.append('image', product.target.files[0]);
@@ -45,12 +44,13 @@ const Admin = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-6 mt-5">
+                    <h1>Add Book</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input class="form-control" name="name" defaultValue="Book Name" ref={register} />
+                        <input class="form-control" name="name" placeholder="Book name" ref={register} />
                         <br></br>
-                        <input class="form-control" name="authorName" defaultValue="Author Name" ref={register} />
+                        <input class="form-control" name="authorName" placeholder="Author Name" ref={register} />
                         <br></br>
-                        <input class="form-control" name="addPrice" defaultValue="Add Price" ref={register} />
+                        <input class="form-control" name="addPrice" placeholder="Add Price" ref={register} />
                         <br></br>
                         <input class="form-control" name="exampleRequired" type="file" onChange={handleImageUpload} />
                         <br></br>

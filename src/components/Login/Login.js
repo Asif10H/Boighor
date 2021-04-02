@@ -18,7 +18,6 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
-    console.log(from);
     const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useState({
         isSignedIn: false,
@@ -27,8 +26,6 @@ const Login = () => {
         password: '',
         photo: ''
     });
-
-
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         firebase.auth().signInWithPopup(googleProvider)
@@ -71,7 +68,7 @@ const Login = () => {
     return (
         <div className="container h-100">
             <div className="row h-100 justify-content-center align-items-center">
-                <div className="col-md-12 card shadow mt-5 bordered ">
+                <div className="col-md-12 card shadow mt-5 bordered h-50 w-25">
                     <button onClick={handleGoogleSignIn} className="btn btn-primary m-2"><FontAwesomeIcon icon={faGoogle} size="2x" /> Continue with Google </button>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import {
   Route
 } from "react-router-dom";
 import Admin from './components/Admin/Admin';
+import Deals from './components/Deals/Deals';
 
 export const UserContext = createContext();
 
@@ -24,8 +25,11 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/admin">
-            <Admin/> 
+          <PrivateRoute path="/admin">
+            <Admin />
+          </PrivateRoute>
+          <Route path="/deals">
+            <Deals />
           </Route>
           <Route path="/login">
             <Login />

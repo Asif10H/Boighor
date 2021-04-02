@@ -6,7 +6,7 @@ const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+            <nav className="navbar navbar-expand-lg text-light bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Boighor</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

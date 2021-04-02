@@ -11,5 +11,5 @@
 - Express.js
 - MongoDB
 
-[boighor-client Repository](link)<br/>
-[boighor-server Repository](link)<br/>
+[boighor-client Repository](https://github.com/Porgramming-Hero-web-course/full-stack-client-Asif10H)<br/>
+[boighor-server Repository](https://github.com/Porgramming-Hero-web-course/full-stack-server-Asif10H)<br/>

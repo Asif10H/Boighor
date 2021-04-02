@@ -8,10 +8,15 @@ const Home = () => {
         fetch('http://localhost:6066/products')
             .then(res => res.json())
             .then(data => setProducts(data));
-    },[])
+    }, [])
     return (
         <div className="container">
             <div className="row">
+                {
+                    products.length === 0 && <div className="spinner-border text-dark" role="status">
+                        <span className="sr-only"></span>
+                    </div>
+                }
                 {
                     products.map(product => <Product product={product} key={product._id}></Product>)
                 }

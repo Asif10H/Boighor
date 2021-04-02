@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Admin from './components/Admin/Admin';
 import Deals from './components/Deals/Deals';
+import Orders from './components/Orders/Orders';
 
 export const UserContext = createContext();
 
@@ -25,6 +26,9 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
+          <PrivateRoute path="/orders">
+            <Orders/>
+          </PrivateRoute>
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>

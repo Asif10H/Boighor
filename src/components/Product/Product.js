@@ -12,7 +12,7 @@ const Product = (props) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-subtitle mb-2 text-muted">{authorName}</p>
                     <div className="d-flex justify-content-between">
-                        <p className="card-text">${addPrice}</p>
+                        <p className="card-text">৳{addPrice}</p>
                         <Link to={`/product/${_id}`} className="card-link btn btn-primary">Buy Now</Link>
                     </div>
                 </div>

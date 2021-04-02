@@ -21,10 +21,9 @@ const ProductDetails = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        
                         <td>{productDetail.name}</td>
                         <td>1</td>
-                        <td>${productDetail.addPrice}</td>
+                        <td>৳{productDetail.addPrice}</td>
                     </tr>
                 </tbody>
             </table>

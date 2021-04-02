@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCZlt_Y6Id82AH6tkGnnV2hW3wlV0VZ4O4",
-  authDomain: "chakarian-riders.firebaseapp.com",
-  projectId: "chakarian-riders",
-  storageBucket: "chakarian-riders.appspot.com",
-  messagingSenderId: "474391213184",
-  appId: "1:474391213184:web:4f2d97d6cf9208e3f82265"
+  apiKey: "AIzaSyDYQzJJQhK3UwZIDL0nS9u6iRtMV4rBKXk",
+  authDomain: "boighor-29d70.firebaseapp.com",
+  projectId: "boighor-29d70",
+  storageBucket: "boighor-29d70.appspot.com",
+  messagingSenderId: "179214603213",
+  appId: "1:179214603213:web:e3f0b7650f5f3b96176a84"
 };
 export default firebaseConfig;
